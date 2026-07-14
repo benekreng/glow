@@ -203,13 +203,13 @@ func (m pagerModel) update(msg tea.Msg) (pagerModel, tea.Cmd) {
 				cmds = append(cmds, viewport.Sync(m.viewport))
 			}
 
-		case "d", "alt+d":
+		case "d", "alt+j":
 			m.viewport.HalfViewDown()
 			if m.viewport.HighPerformanceRendering {
 				cmds = append(cmds, viewport.Sync(m.viewport))
 			}
 
-		case "u", "alt+u":
+		case "u", "alt+k":
 			m.viewport.HalfViewUp()
 			if m.viewport.HighPerformanceRendering {
 				cmds = append(cmds, viewport.Sync(m.viewport))
